@@ -1,8 +1,8 @@
 up:
-	NODE_ENV=production nodemon index.js
+	NODE_ENV=production node index.js
 
 start: 
-	NODE_ENV=development nodemon index.js
+	NODE_ENV=development node index.js
 
 prod_up:
 	NODE_ENV=production forever start index.js

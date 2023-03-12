@@ -2,7 +2,7 @@
 	"liveServer.settings.proxy": {
 		"enable": true,
 		"baseUri": "/api",
-		"proxyUri": "http://localhost:8081/api"
+		"proxyUri": "http://localhost:8081/"
 	},
 	"liveServer.settings.ignoreFiles": ["./sets/*"]
 }

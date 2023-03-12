@@ -39,7 +39,10 @@
 				<div class="col-5 h-100 m-auto">
 					<form class="needs-validation has-validation">
 						<!-- Email -->
-						<div class="input-group has-validation mb-3">
+						<div
+							class="input-group has-validation mb-3"
+							data-igroup="email"
+						>
 							<!-- Добавить is-valid / is-invalid -->
 							<div class="form-floating">
 								<!-- Добавить is-valid / is-invalid -->
@@ -59,7 +62,10 @@
 						<!-- Email -->
 
 						<!-- Password -->
-						<div class="input-group has-validation mb-3">
+						<div
+							class="input-group has-validation mb-3"
+							data-igroup="password"
+						>
 							<!-- Добавить is-valid / is-invalid -->
 							<div class="form-floating">
 								<!-- Добавить is-valid / is-invalid -->
@@ -81,6 +87,7 @@
 						<button
 							type="button"
 							class="btn btn-primary w-100 mb-3"
+							data-action="enter"
 						>
 							Войти
 						</button>
@@ -109,5 +116,7 @@
 			integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
 			crossorigin="anonymous"
 		></script>
+
+		<script src="src/index/index.js" type="module"></script>
 	</body>
 </html>
