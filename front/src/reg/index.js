@@ -1,4 +1,4 @@
-import { isEmail } from "../util.js";
+import { isEmail, session } from "../util.js";
 
 const igroupEmail = document.querySelector('[data-igroup="email"]');
 const igroupName = document.querySelector('[data-igroup="name"]');
@@ -10,6 +10,12 @@ const regButton = document.querySelector('[data-action="reg"]');
 main();
 
 async function main() {
+	const user = await session();
+
+	if (user) {
+		return (location.href = "/profile.html");
+	}
+
 	regButton.addEventListener("click", validate);
 }
 
@@ -179,7 +185,10 @@ async function registration() {
 			return;
 		}
 
+		const text = await response.text();
+		throw Error(text);
 	} catch (error) {
-		console.log(error);
+		console.error(error);
+		alert(error.message);
 	}
 }

@@ -22,15 +22,15 @@
 						>Пользователи</a
 					>
 				</div>
-				<button class="btn btn-danger">Выход</button>
+				<button class="btn btn-danger d-none" data-action="signout">Выход</button>
 			</div>
 		</nav>
 		<!-- Main Header -->
 
 		<!-- Main Conteiner -->
 		<div class="container main-container pt-2">
-			<div class="list-group">
-				<a
+			<div class="list-group" data-segment="userslist">
+				<!-- <a
 					href="#"
 					class="list-group-item list-group-item-action text-primary"
 				>
@@ -47,7 +47,7 @@
 					class="list-group-item list-group-item-action text-primary"
 				>
 					Ольга Табак
-				</a>
+				</a> -->
 			</div>
 		</div>
 		<!-- Main Conteiner -->
@@ -67,5 +67,7 @@
 			integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
 			crossorigin="anonymous"
 		></script>
+
+		<script src="src/users/index.js" type="module"></script>
 	</body>
 </html>
