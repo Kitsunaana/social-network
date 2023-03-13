@@ -8,7 +8,7 @@ export function isEmail(str) {
 // GET /api/session
 export async function session(unauthenticatedCallback = () => {}) {
 	try {
-		const response = await fetch("http://localhost:8081/api/session");
+		const response = await fetch("/api/session");
 
 		if (response.ok) {
 			const data = await response.json();
@@ -18,5 +18,23 @@ export async function session(unauthenticatedCallback = () => {}) {
 		unauthenticatedCallback();
 	} catch (error) {
 		console.error(error);
+	}
+}
+
+// GET /api/user/userId
+export async function getProfile (userId) {
+	try {
+		const response = await fetch(`/api/user/${userId}`);
+
+		if (response.ok) {
+			const user = await response.json();
+			console.log(user);
+			return user;
+		}
+
+		return null
+	} catch (error) {
+		console.error(error);
+		return null
 	}
 }

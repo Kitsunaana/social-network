@@ -26,7 +26,7 @@
 						>Пользователи</a
 					>
 				</div>
-				<button class="btn btn-danger">Выход</button>
+				<button class="btn btn-danger d-none" data-action="signout">Выход</button>
 			</div>
 		</nav>
 		<!-- Main Header -->
@@ -35,23 +35,25 @@
 		<div class="container main-container pt-2">
 			<div class="row h-100">
 				<!-- Menu -->
-				<div class="col-3">
+				<div class="col-3 invisible" data-segment="menu">
 					<div class="list-group">
 						<a
 							href="/profile.html"
-							class="list-group-item list-group-item-action active"
-							aria-current="true"
+							class="list-group-item list-group-item-action"
+							data-menuitem="profile"
 						>
 							Моя страница
 						</a>
 						<a
 							href="/friends.html"
 							class="list-group-item list-group-item-action"
+							data-menuitem="friends"
 							>Друзья</a
 						>
 						<a
 							href="/chat.html"
 							class="list-group-item list-group-item-action"
+							data-menuitem="chat"
 							>Чат
 							<span
 								class="d-none position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle"
@@ -61,6 +63,7 @@
 						<a
 							href="/setting.html"
 							class="list-group-item list-group-item-action"
+							data-menuitem="settings"
 							>Настройки</a
 						>
 					</div>
@@ -372,5 +375,7 @@
 			integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
 			crossorigin="anonymous"
 		></script>
+
+		<script src="./src/profile/index.js" type="module"></script>
 	</body>
 </html>

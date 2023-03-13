@@ -7,7 +7,9 @@ main();
 // GET /api/users
 async function main() {
 	try {
-		const response = await fetch("http://localhost:8081/api/users", { method: "GET" });
+		const response = await fetch("/api/users", { method: "GET" });
+		// const response = await fetch("http://localhost:8081/api/users", { method: "GET" });
+
 
 		if (response.ok) {
 			const users = await response.json();

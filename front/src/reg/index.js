@@ -171,7 +171,7 @@ async function registration() {
 	// Сброс классов группы подтверждения
 
 	try {
-		const response = await fetch("http://localhost:8081/api/reg", {
+		const response = await fetch("/api/reg", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",

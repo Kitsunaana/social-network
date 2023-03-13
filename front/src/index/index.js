@@ -88,7 +88,7 @@ async function enter() {
 	data.append("password", password);
 
 	try {
-		const response = await fetch("http://localhost:8081/api/signin", {
+		const response = await fetch("/api/signin", {
 			method: "POST",
 			body: data,
 		});

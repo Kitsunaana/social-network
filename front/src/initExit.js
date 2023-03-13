@@ -6,7 +6,6 @@ main()
 
 async function main () {
     const user = await session()
-    console.log(user);
 
     if (user) {
         signoutButton.classList.remove('d-none')
@@ -18,9 +17,9 @@ async function main () {
 
 // POST /api/signout
 async function signout () {
-    console.log('asd')
     try {
-        await fetch('http://localhost:8081/api/signout', { method: "POST" })
+        const response = await fetch('/api/signout', { method: "POST" })
+        // const response = await fetch('http://localhost:8081/api/signout', { method: "POST" })
 
     } catch (error) {
         console.log(error)
