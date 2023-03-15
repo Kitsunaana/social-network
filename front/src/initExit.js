@@ -19,7 +19,6 @@ async function main () {
 async function signout () {
     try {
         const response = await fetch('/api/signout', { method: "POST" })
-        // const response = await fetch('http://localhost:8081/api/signout', { method: "POST" })
 
     } catch (error) {
         console.log(error)

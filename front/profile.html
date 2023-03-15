@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Оксана Беляева</title>
+		<title></title>
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
 			rel="stylesheet"
@@ -75,27 +75,27 @@
 					<!-- Портфолио -->
 					<div class="row mb-3">
 						<div class="col-4 portfolio-avatar">
-							<img src="/sets/avatar.png" alt="" />
+							<img alt="" data-field="avatar" />
 						</div>
 						<div class="col-8">
-							<h3>Алексей Данчин</h3>
+							<h3 data-field="name"></h3>
 							<p class="text-muted">
-								<small>Тут будет мой статус</small>
+								<small data-field="status"></small>
 							</p>
 
-							<button class="btn btn-primary">
+							<button class="btn btn-primary d-none" data-action="addFriend">
 								Добавить в друзья
 							</button>
 
-							<button class="btn btn-info">
+							<button class="btn btn-info d-none" data-action="removeRequest">
 								Убрать заявку в друзья
 							</button>
 
-							<button class="btn btn-danger">
+							<button class="btn btn-danger d-none" data-action="removeFriend">
 								Удалить из друзей
 							</button>
 
-							<button class="btn btn-primary">
+							<button class="btn btn-primary d-none" data-action="startChat">
 								Написать сообщение
 							</button>
 						</div>
@@ -109,11 +109,14 @@
 							placeholder="Leave a comment here"
 							id="floatingTextarea2"
 							style="height: 100px"
+							data-field="postEditor"
+							disabled
+							value="На стене могут писать только друзья"
 						></textarea>
 						<label for="floatingTextarea2"
 							>Новая запись на стене</label
 						>
-						<button type="button" class="btn btn-primary">
+						<button disabled type="button" class="btn btn-primary" data-action="sendPost">
 							Отправить
 						</button>
 					</div>
